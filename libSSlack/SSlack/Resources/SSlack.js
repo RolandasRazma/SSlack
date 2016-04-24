@@ -82,7 +82,6 @@
         }
     }
 
-
     r(function(){
         initUI();
         initHooks();

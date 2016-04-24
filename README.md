@@ -1,7 +1,7 @@
 # SSlack
 crypto in [Slack](https://slack.com)
 
-`$ ./sslack /Applications/Slack.app/Contents/MacOS/Slack`
+`$ ./sslack /Applications/Slack.app/Contents/MacOS/Slack &`
 
 ![SSlack](https://cloud.githubusercontent.com/assets/1027187/14769924/a9b6868a-0a5b-11e6-9090-b15dac0d6d08.png)
 
