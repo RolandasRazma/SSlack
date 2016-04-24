@@ -8,8 +8,6 @@
 //  openssl genrsa -out private_sslack.pem 4096
 //  openssl rsa -pubout -in private_sslack.pem -out public_key.pem
 //
-//  openssl genrsa -out private_sslack.pem 4096 && openssl rsa -pubout -in private_sslack.pem -out public_key.pem
-//
 
 #import "SSlack.h"
 #import "SSlackJS.h"
