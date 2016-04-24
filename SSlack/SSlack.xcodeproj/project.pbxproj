@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F0AF34B11CC7EE640031054D /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F0AF34B01CC7EE640031054D /* main.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F06C7BA91CC976E400439EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0CF6A491CC96F2C00997299 /* libSSlack.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F0AF34971CC7EDF90031054D;
+			remoteInfo = libSSlack;
+		};
+		F0CF6A4D1CC96F2C00997299 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0CF6A491CC96F2C00997299 /* libSSlack.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F0AF34981CC7EDF90031054D;
+			remoteInfo = libSSlack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F0AF34AB1CC7EE640031054D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F0AF34AD1CC7EE640031054D /* sslack */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = sslack; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0AF34B01CC7EE640031054D /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F0CF6A491CC96F2C00997299 /* libSSlack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libSSlack.xcodeproj; path = ../libSSlack/libSSlack.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0AF34AA1CC7EE640031054D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F0AF34A41CC7EE640031054D = {
+			isa = PBXGroup;
+			children = (
+				F0AF34AF1CC7EE640031054D /* SSlack */,
+				F0AF34B71CC7EFBD0031054D /* Frameworks & Libraries */,
+				F0AF34AE1CC7EE640031054D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0AF34AE1CC7EE640031054D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0AF34AD1CC7EE640031054D /* sslack */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0AF34AF1CC7EE640031054D /* SSlack */ = {
+			isa = PBXGroup;
+			children = (
+				F0AF34B01CC7EE640031054D /* main.c */,
+			);
+			path = SSlack;
+			sourceTree = "<group>";
+		};
+		F0AF34B71CC7EFBD0031054D /* Frameworks & Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				F0CF6A491CC96F2C00997299 /* libSSlack.xcodeproj */,
+			);
+			name = "Frameworks & Libraries";
+			sourceTree = "<group>";
+		};
+		F0CF6A4A1CC96F2C00997299 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0CF6A4E1CC96F2C00997299 /* libsslack.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0AF34AC1CC7EE640031054D /* SSlack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0AF34B41CC7EE640031054D /* Build configuration list for PBXNativeTarget "SSlack" */;
+			buildPhases = (
+				F0AF34A91CC7EE640031054D /* Sources */,
+				F0AF34AA1CC7EE640031054D /* Frameworks */,
+				F0AF34AB1CC7EE640031054D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F06C7BAA1CC976E400439EAE /* PBXTargetDependency */,
+			);
+			name = SSlack;
+			productName = SSlack;
+			productReference = F0AF34AD1CC7EE640031054D /* sslack */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0AF34A51CC7EE640031054D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Rolandas Razma";
+				TargetAttributes = {
+					F0AF34AC1CC7EE640031054D = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = F0AF34A81CC7EE640031054D /* Build configuration list for PBXProject "SSlack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F0AF34A41CC7EE640031054D;
+			productRefGroup = F0AF34AE1CC7EE640031054D /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F0CF6A4A1CC96F2C00997299 /* Products */;
+					ProjectRef = F0CF6A491CC96F2C00997299 /* libSSlack.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				F0AF34AC1CC7EE640031054D /* SSlack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F0CF6A4E1CC96F2C00997299 /* libsslack.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libsslack.dylib;
+			remoteRef = F0CF6A4D1CC96F2C00997299 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0AF34A91CC7EE640031054D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0AF34B11CC7EE640031054D /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F06C7BAA1CC976E400439EAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libSSlack;
+			targetProxy = F06C7BA91CC976E400439EAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F0AF34B21CC7EE640031054D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F0AF34B31CC7EE640031054D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F0AF34B51CC7EE640031054D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = sslack;
+			};
+			name = Debug;
+		};
+		F0AF34B61CC7EE640031054D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = sslack;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0AF34A81CC7EE640031054D /* Build configuration list for PBXProject "SSlack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0AF34B21CC7EE640031054D /* Debug */,
+				F0AF34B31CC7EE640031054D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0AF34B41CC7EE640031054D /* Build configuration list for PBXNativeTarget "SSlack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0AF34B51CC7EE640031054D /* Debug */,
+				F0AF34B61CC7EE640031054D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0AF34A51CC7EE640031054D /* Project object */;
+}

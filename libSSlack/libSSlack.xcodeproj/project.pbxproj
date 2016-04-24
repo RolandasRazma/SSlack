@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F05A03081CC8D89600CD5961 /* SSlack.h in Headers */ = {isa = PBXBuildFile; fileRef = F05A03041CC8D89600CD5961 /* SSlack.h */; };
+		F05A03091CC8D89600CD5961 /* SSlack.m in Sources */ = {isa = PBXBuildFile; fileRef = F05A03051CC8D89600CD5961 /* SSlack.m */; };
+		F05A030A1CC8D89600CD5961 /* SSlackJS.h in Headers */ = {isa = PBXBuildFile; fileRef = F05A03061CC8D89600CD5961 /* SSlackJS.h */; };
+		F05A030E1CC8D8EE00CD5961 /* WebView+RRAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F05A030C1CC8D8EE00CD5961 /* WebView+RRAdditions.h */; };
+		F05A030F1CC8D8EE00CD5961 /* WebView+RRAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F05A030D1CC8D8EE00CD5961 /* WebView+RRAdditions.m */; };
+		F07311371CCC18EE00DF03EB /* SSlackSec.h in Headers */ = {isa = PBXBuildFile; fileRef = F07311351CCC18EE00DF03EB /* SSlackSec.h */; };
+		F07311381CCC18EE00DF03EB /* SSlackSec.m in Sources */ = {isa = PBXBuildFile; fileRef = F07311361CCC18EE00DF03EB /* SSlackSec.m */; };
+		F0ED52DE1CCD2C78002DC1D5 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0ED52DD1CCD2C78002DC1D5 /* Tests.m */; };
+		F0ED52E01CCD2C78002DC1D5 /* libsslack.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F0AF34981CC7EDF90031054D /* libsslack.dylib */; };
+		F0ED52E61CCD2CB7002DC1D5 /* SSlack.m in Sources */ = {isa = PBXBuildFile; fileRef = F05A03051CC8D89600CD5961 /* SSlack.m */; };
+		F0ED52E71CCD2CB7002DC1D5 /* SSlackSec.m in Sources */ = {isa = PBXBuildFile; fileRef = F07311361CCC18EE00DF03EB /* SSlackSec.m */; };
+		F0ED52E81CCD2CB7002DC1D5 /* SSlackSecKey.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FA02A71CCD229600CB2054 /* SSlackSecKey.m */; };
+		F0FA02A81CCD229600CB2054 /* SSlackSecKey.h in Headers */ = {isa = PBXBuildFile; fileRef = F0FA02A61CCD229600CB2054 /* SSlackSecKey.h */; };
+		F0FA02A91CCD229600CB2054 /* SSlackSecKey.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FA02A71CCD229600CB2054 /* SSlackSecKey.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0ED52E11CCD2C78002DC1D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0AF34901CC7EDF90031054D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0AF34971CC7EDF90031054D;
+			remoteInfo = libSSlack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F05A03041CC8D89600CD5961 /* SSlack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSlack.h; path = Classes/SSlack.h; sourceTree = "<group>"; };
+		F05A03051CC8D89600CD5961 /* SSlack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSlack.m; path = Classes/SSlack.m; sourceTree = "<group>"; };
+		F05A03061CC8D89600CD5961 /* SSlackJS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSlackJS.h; path = Classes/SSlackJS.h; sourceTree = "<group>"; };
+		F05A030C1CC8D8EE00CD5961 /* WebView+RRAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WebView+RRAdditions.h"; sourceTree = "<group>"; };
+		F05A030D1CC8D8EE00CD5961 /* WebView+RRAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WebView+RRAdditions.m"; sourceTree = "<group>"; };
+		F07311351CCC18EE00DF03EB /* SSlackSec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSlackSec.h; sourceTree = "<group>"; };
+		F07311361CCC18EE00DF03EB /* SSlackSec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSlackSec.m; sourceTree = "<group>"; };
+		F0AF34981CC7EDF90031054D /* libsslack.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libsslack.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0D3F34F1CC7F73600C4CA51 /* SSlack.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = SSlack.js; sourceTree = "<group>"; };
+		F0ED52DB1CCD2C78002DC1D5 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0ED52DD1CCD2C78002DC1D5 /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		F0ED52DF1CCD2C78002DC1D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0FA02A61CCD229600CB2054 /* SSlackSecKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSlackSecKey.h; sourceTree = "<group>"; };
+		F0FA02A71CCD229600CB2054 /* SSlackSecKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSlackSecKey.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0AF34951CC7EDF90031054D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0ED52D81CCD2C78002DC1D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0ED52E01CCD2C78002DC1D5 /* libsslack.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F05A03071CC8D89600CD5961 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				F05A030B1CC8D8D100CD5961 /* WebView (Additions) */,
+			);
+			name = Support;
+			path = Classes/Support;
+			sourceTree = "<group>";
+		};
+		F05A030B1CC8D8D100CD5961 /* WebView (Additions) */ = {
+			isa = PBXGroup;
+			children = (
+				F05A030C1CC8D8EE00CD5961 /* WebView+RRAdditions.h */,
+				F05A030D1CC8D8EE00CD5961 /* WebView+RRAdditions.m */,
+			);
+			path = "WebView (Additions)";
+			sourceTree = "<group>";
+		};
+		F0AF348F1CC7EDF90031054D = {
+			isa = PBXGroup;
+			children = (
+				F0AF349A1CC7EDF90031054D /* SSlack */,
+				F0E44D1D1CC96FBC00A9A9E6 /* Frameworks & Libraries */,
+				F0D3F34E1CC7F73600C4CA51 /* Resources */,
+				F0ED52DC1CCD2C78002DC1D5 /* Tests */,
+				F0AF34991CC7EDF90031054D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0AF34991CC7EDF90031054D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0AF34981CC7EDF90031054D /* libsslack.dylib */,
+				F0ED52DB1CCD2C78002DC1D5 /* Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0AF349A1CC7EDF90031054D /* SSlack */ = {
+			isa = PBXGroup;
+			children = (
+				F05A03071CC8D89600CD5961 /* Support */,
+				F05A03061CC8D89600CD5961 /* SSlackJS.h */,
+				F05A03041CC8D89600CD5961 /* SSlack.h */,
+				F05A03051CC8D89600CD5961 /* SSlack.m */,
+				F07311351CCC18EE00DF03EB /* SSlackSec.h */,
+				F07311361CCC18EE00DF03EB /* SSlackSec.m */,
+				F0FA02A61CCD229600CB2054 /* SSlackSecKey.h */,
+				F0FA02A71CCD229600CB2054 /* SSlackSecKey.m */,
+			);
+			path = SSlack;
+			sourceTree = "<group>";
+		};
+		F0D3F34E1CC7F73600C4CA51 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F0D3F34F1CC7F73600C4CA51 /* SSlack.js */,
+			);
+			name = Resources;
+			path = SSlack/Resources;
+			sourceTree = "<group>";
+		};
+		F0E44D1D1CC96FBC00A9A9E6 /* Frameworks & Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Frameworks & Libraries";
+			sourceTree = "<group>";
+		};
+		F0ED52DC1CCD2C78002DC1D5 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F0ED52DD1CCD2C78002DC1D5 /* Tests.m */,
+				F0ED52DF1CCD2C78002DC1D5 /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F0AF34961CC7EDF90031054D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0FA02A81CCD229600CB2054 /* SSlackSecKey.h in Headers */,
+				F07311371CCC18EE00DF03EB /* SSlackSec.h in Headers */,
+				F05A030A1CC8D89600CD5961 /* SSlackJS.h in Headers */,
+				F05A03081CC8D89600CD5961 /* SSlack.h in Headers */,
+				F05A030E1CC8D8EE00CD5961 /* WebView+RRAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F0AF34971CC7EDF90031054D /* libSSlack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0AF34A11CC7EDF90031054D /* Build configuration list for PBXNativeTarget "libSSlack" */;
+			buildPhases = (
+				F0D3F3521CC7F75400C4CA51 /* ShellScript */,
+				F0AF34941CC7EDF90031054D /* Sources */,
+				F0AF34951CC7EDF90031054D /* Frameworks */,
+				F0AF34961CC7EDF90031054D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libSSlack;
+			productName = SSlack;
+			productReference = F0AF34981CC7EDF90031054D /* libsslack.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		F0ED52DA1CCD2C78002DC1D5 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0ED52E51CCD2C78002DC1D5 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				F0ED52D71CCD2C78002DC1D5 /* Sources */,
+				F0ED52D81CCD2C78002DC1D5 /* Frameworks */,
+				F0ED52D91CCD2C78002DC1D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0ED52E21CCD2C78002DC1D5 /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = F0ED52DB1CCD2C78002DC1D5 /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0AF34901CC7EDF90031054D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Rolandas Razma";
+				TargetAttributes = {
+					F0AF34971CC7EDF90031054D = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					F0ED52DA1CCD2C78002DC1D5 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = F0AF34931CC7EDF90031054D /* Build configuration list for PBXProject "libSSlack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F0AF348F1CC7EDF90031054D;
+			productRefGroup = F0AF34991CC7EDF90031054D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0AF34971CC7EDF90031054D /* libSSlack */,
+				F0ED52DA1CCD2C78002DC1D5 /* Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0ED52D91CCD2C78002DC1D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F0D3F3521CC7F75400C4CA51 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd $PROJECT_DIR/SSlack/Resources/\nxxd -i SSlack.js > ../Classes/SSlackJS.h";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0AF34941CC7EDF90031054D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F07311381CCC18EE00DF03EB /* SSlackSec.m in Sources */,
+				F05A03091CC8D89600CD5961 /* SSlack.m in Sources */,
+				F0FA02A91CCD229600CB2054 /* SSlackSecKey.m in Sources */,
+				F05A030F1CC8D8EE00CD5961 /* WebView+RRAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0ED52D71CCD2C78002DC1D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0ED52E71CCD2CB7002DC1D5 /* SSlackSec.m in Sources */,
+				F0ED52E61CCD2CB7002DC1D5 /* SSlack.m in Sources */,
+				F0ED52E81CCD2CB7002DC1D5 /* SSlackSecKey.m in Sources */,
+				F0ED52DE1CCD2C78002DC1D5 /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F0ED52E21CCD2C78002DC1D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0AF34971CC7EDF90031054D /* libSSlack */;
+			targetProxy = F0ED52E11CCD2C78002DC1D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F0AF349F1CC7EDF90031054D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F0AF34A01CC7EDF90031054D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F0AF34A21CC7EDF90031054D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = sslack;
+			};
+			name = Debug;
+		};
+		F0AF34A31CC7EDF90031054D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = sslack;
+			};
+			name = Release;
+		};
+		F0ED52E31CCD2C78002DC1D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = lt.razma.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F0ED52E41CCD2C78002DC1D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = lt.razma.Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0AF34931CC7EDF90031054D /* Build configuration list for PBXProject "libSSlack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0AF349F1CC7EDF90031054D /* Debug */,
+				F0AF34A01CC7EDF90031054D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0AF34A11CC7EDF90031054D /* Build configuration list for PBXNativeTarget "libSSlack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0AF34A21CC7EDF90031054D /* Debug */,
+				F0AF34A31CC7EDF90031054D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0ED52E51CCD2C78002DC1D5 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0ED52E31CCD2C78002DC1D5 /* Debug */,
+				F0ED52E41CCD2C78002DC1D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0AF34901CC7EDF90031054D /* Project object */;
+}
