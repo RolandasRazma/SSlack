@@ -119,7 +119,7 @@
     XCTAssertNil(error);
     XCTAssertNotNil(decodedString);
     XCTAssertTrue([decodedString isEqualToString:@"_STRING_"]);
-    
+
 }
 
 

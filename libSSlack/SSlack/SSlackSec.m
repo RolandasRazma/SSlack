@@ -121,7 +121,6 @@
 
 #pragma mark - SSlackSec (NSString)
 
-
 + (NSString *)encryptString:(NSString *)string withKey:(SSlackSecKey *)key error:(NSError **)error {
     if ( !string ) string = @"";
     

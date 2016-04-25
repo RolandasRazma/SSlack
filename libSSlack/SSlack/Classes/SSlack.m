@@ -53,8 +53,9 @@
 
 #pragma mark - SSlack
 
-static NSString * const kSSlackKeyPairPublicKey  = @"kSSlackKeyPairPublicKey";
-static NSString * const kSSlackKeyPairPrivateKey = @"kSSlackKeyPairPrivateKey";
+static NSString * const kSSlackKeyRemotePublicKey  = @"kSSlackKeyRemotePublicKey";
+static NSString * const kSSlackKeyLocalPublicKey   = @"kSSlackKeyLocalPublicKey";
+static NSString * const kSSlackKeyLocalPrivateKey  = @"kSSlackKeyLocalPrivateKey";
 static NSMutableDictionary <NSString *, NSDictionary <NSString *, SSlackSecKey *> *> *_keyPairs;
 
 
@@ -113,41 +114,52 @@ static NSMutableDictionary <NSString *, NSDictionary <NSString *, SSlackSecKey *
 
 
 - (NSDictionary *)requestKeysForUserWithUUID:(NSString *)userUUID {
-    NSLog(@"requestKeysForUserWithUUID: %@", userUUID);
-    
-    NSString *publicKey = [self userInputWithMessageText:@"Public key" informativeText:@"Users public key that will be used to encrypt messages"];
-    
-    if ( !publicKey.length ) return nil;
-    
-    SSlackSecKey *publicSecKey = [SSlackSecKey secKeyWithKey:publicKey];
-    
-    if ( !publicSecKey ) return nil;
 
     
-    NSString *privateKey = [self userInputWithMessageText:@"Private key" informativeText:@"Your private key that will be used to decrypt messages"];
+    NSString *remotePublicKey = [self userInputWithMessageText:@"Remote User Public key" informativeText:@"Remote Users public key that will be used to encrypt messages"];
     
-    if ( !privateKey.length ) return nil;
+    if ( !remotePublicKey.length ) return nil;
     
-    SSlackSecKey *privateSecKey = [SSlackSecKey secKeyWithKey:privateKey];
+    SSlackSecKey *remotePublicSecKey = [SSlackSecKey secKeyWithKey:remotePublicKey];
     
-    if ( !privateSecKey ) return nil;
+    if ( !remotePublicSecKey ) return nil;
+
+    
+    NSString *localPublicKey = [self userInputWithMessageText:@"Your Public key" informativeText:@"Your public key that will be used to encript local messages"];
+    
+    if ( !localPublicKey.length ) return nil;
+    
+    SSlackSecKey *localPublicSecKey = [SSlackSecKey secKeyWithKey:localPublicKey];
+    
+    if ( !localPublicSecKey ) return nil;
+    
+    
+    NSString *localPrivateKey = [self userInputWithMessageText:@"Your Private key" informativeText:@"Your private key that will be used to decrypt messages"];
+    
+    if ( !localPrivateKey.length ) return nil;
+    
+    SSlackSecKey *localPrivateSecKey = [SSlackSecKey secKeyWithKey:localPrivateKey];
+    
+    if ( !localPrivateSecKey ) return nil;
+    
     
     _keyPairs[userUUID] = @{
-         kSSlackKeyPairPublicKey: publicSecKey,
-        kSSlackKeyPairPrivateKey: privateSecKey
+        kSSlackKeyRemotePublicKey: remotePublicSecKey,
+         kSSlackKeyLocalPublicKey: localPublicSecKey,
+        kSSlackKeyLocalPrivateKey: localPrivateSecKey
     };
     
     return _keyPairs[userUUID];
 }
 
 
-- (NSString *)encryptMessage:(NSString *)message toUserUUID:(NSString *)userUUID {
- 
-    if ( ![self isEncryptingChannelWithUUID:userUUID] ) {
-        [self requestKeysForUserWithUUID:userUUID];
+- (NSString *)encryptMessage:(NSString *)message toUserUUID:(NSString *)userUUID inChannel:(NSString *)channelUUID isOwn:(BOOL)isOwn {
+
+    if ( ![self isEncryptingChannelWithUUID:channelUUID] ) {
+        [self requestKeysForUserWithUUID:channelUUID];
     }
     
-    SSlackSecKey *publicKey = _keyPairs[userUUID][kSSlackKeyPairPublicKey];
+    SSlackSecKey *publicKey = _keyPairs[channelUUID][isOwn?kSSlackKeyLocalPublicKey:kSSlackKeyRemotePublicKey];
     if ( !publicKey ) {
         return nil;
     }
@@ -165,23 +177,23 @@ static NSMutableDictionary <NSString *, NSDictionary <NSString *, SSlackSecKey *
 }
 
 
-- (NSString *)decryptMessage:(NSString *)message fromUserUUID:(NSString *)userUUID {
+- (NSString *)decryptMessage:(NSString *)message inChannel:(NSString *)channelUUID {
     if ( !message.length ) return message;
-
-    if ( ![self isEncryptingChannelWithUUID:userUUID] ) {
-        [self requestKeysForUserWithUUID:userUUID];
+    
+    if ( ![self isEncryptingChannelWithUUID:channelUUID] ) {
+        [self requestKeysForUserWithUUID:channelUUID];
     }
     
-    SSlackSecKey *privateKey = _keyPairs[userUUID][kSSlackKeyPairPrivateKey];
+    SSlackSecKey *privateKey = _keyPairs[channelUUID][kSSlackKeyLocalPrivateKey];
     if ( !privateKey ) {
         return nil;
     }
-    
+
     NSError *error;
     message = [SSlackSec decryptString:message
                                withKey:privateKey
                                  error:&error];
-    
+
     if ( error ) {
         NSLog(@"decryptMessage:fromUserUUID: failed with error: %li - %@", (long)error.code, error.localizedDescription);
     }

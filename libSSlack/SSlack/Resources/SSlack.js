@@ -4,7 +4,16 @@
     function log(){
         __SSlack__.log(Array.prototype.slice.call(arguments));
     }
+ 
+    __SSlack__.getMemberNameById = function() {
+        var member = TS.members.getMemberById(model.user);
+        return member.name;
+    }
 
+    __SSlack__.userUUID = function(){
+        return TS.model.user.id;
+    }
+ 
     function setUIStateAsSecure( secure ) {
         $('#main_sslack_menu').children('.ts_icon').removeClass( "ts_icon_unlock ts_icon_lock" ).addClass( secure?"ts_icon_lock":"ts_icon_unlock" );
         $('#message-input').css('border-color', secure?'green':'');
@@ -53,10 +62,15 @@
         // Received message
         var message = TS.templates.message;
         TS.templates.message = function(context, execOptions) {
+
             if ( context.msg.type === 'message' && context.msg.user && context.model_ob.user && context.msg.text ) {
                 var txt = context.msg.text;
                 if ( txt.length > protocolUUID.length && txt.substring(0, protocolUUID.length) === protocolUUID ) {
-                    if ( (decryptedText = __SSlack__.decrypt(txt.substring(protocolUUID.length), context.model_ob.user)) ) {
+                    var startIndex = txt.indexOf(TS.model.user.id) + TS.model.user.id.length + 1;
+                    var endIndex   = txt.indexOf('|', startIndex);
+
+                    if ( (decryptedText = __SSlack__.decrypt(txt.substring(startIndex, endIndex), context.model_ob.user)) ) {
+
                         arguments[0].msg.text = decryptedText;
                     } else {
                         arguments[0].msg.text = "SSLack: Broken crypto.";
@@ -70,12 +84,17 @@
         // Send message
         var sendMessage = TS.client.ui.sendMessage;
         TS.client.ui.sendMessage = function(model_ob, txt, in_reply_to_msg) {
+
             if ( model_ob.user && __SSlack__.isEncrypting(model_ob.user) ) {
-                if ( (encryptedText = __SSlack__.encrypt(txt, model_ob.user)) ) {
-                    arguments[1] = protocolUUID + encryptedText;
-                } else {
-                    return;
+                var users = [model_ob.user, TS.model.user.id];
+
+                var newText = protocolUUID;
+
+                for ( var i = 0; i<users.length; i++ ) {
+                    newText += users[i] + '|' + __SSlack__.encrypt(txt, users[i], model_ob.user, users[i] === TS.model.user.id) + '|';
                 }
+ 
+                arguments[1] = newText;
             }
 
             return sendMessage.apply(this, arguments);
